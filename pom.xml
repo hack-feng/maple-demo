@@ -79,6 +79,13 @@
 			<version>${velocity-version}</version>
 		</dependency>
 
+		<!--配置knife4j接口样式-->
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-spring-boot-starter</artifactId>
+			<version>2.0.7</version>
+		</dependency>
+
 		<!--Lombok管理Getter/Setter/log等-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>

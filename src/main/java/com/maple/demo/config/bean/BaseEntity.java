@@ -1,0 +1,46 @@
+package com.maple.demo.config.bean;
+
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * @author 笑小枫
+ * @date 2022/7/11
+ */
+@Data
+public class BaseEntity implements Serializable {
+
+    @TableId(type = IdType.AUTO)
+    protected Long id;
+
+    @ApiModelProperty("创建人id")
+    @TableField(value = "create_id", fill = FieldFill.INSERT)
+    private String createId;
+
+    @ApiModelProperty("创建人名称")
+    @TableField(value = "create_name", fill = FieldFill.INSERT)
+    private String createName;
+
+    @ApiModelProperty("创建时间")
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
+    private Date createTime;
+
+    @ApiModelProperty("更新人id")
+    @TableField(value = "update_id", fill = FieldFill.INSERT_UPDATE)
+    private String updateId;
+
+    @ApiModelProperty("更新人名称")
+    @TableField(value = "update_name", fill = FieldFill.INSERT_UPDATE)
+    private String updateName;
+
+    @ApiModelProperty("更新时间")
+    @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
+    private Date updateTime;
+}
