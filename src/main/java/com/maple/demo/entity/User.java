@@ -27,12 +27,6 @@ public class User extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("小程序的openId")
-    private String openId;
-
-    @ApiModelProperty("部门ID")
-    private Long deptId;
-
     @ApiModelProperty("用户账号")
     private String account;
 
@@ -65,12 +59,6 @@ public class User extends BaseEntity {
 
     @ApiModelProperty("帐号状态（0正常 1停用）")
     private String status;
-
-    @ApiModelProperty("最后登录IP")
-    private String loginIp;
-
-    @ApiModelProperty("最后登录时间")
-    private LocalDateTime loginDate;
 
     @ApiModelProperty("删除标志")
     @TableLogic

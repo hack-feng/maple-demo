@@ -22,7 +22,7 @@ public class BaseEntity implements Serializable {
 
     @ApiModelProperty("创建人id")
     @TableField(value = "create_id", fill = FieldFill.INSERT)
-    private String createId;
+    private Long createId;
 
     @ApiModelProperty("创建人名称")
     @TableField(value = "create_name", fill = FieldFill.INSERT)
@@ -34,7 +34,7 @@ public class BaseEntity implements Serializable {
 
     @ApiModelProperty("更新人id")
     @TableField(value = "update_id", fill = FieldFill.INSERT_UPDATE)
-    private String updateId;
+    private Long updateId;
 
     @ApiModelProperty("更新人名称")
     @TableField(value = "update_name", fill = FieldFill.INSERT_UPDATE)
