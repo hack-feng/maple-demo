@@ -1,6 +1,7 @@
 package com.maple.demo.controller;
 
 import com.maple.demo.service.IUserService;
+import com.maple.demo.util.JwtUtil;
 import com.maple.demo.vo.model.UserModel;
 import com.maple.demo.vo.query.LoginQuery;
 import io.swagger.annotations.Api;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  * 系统登录
  *
  * @author 笑小枫
- * @date 2022/12/8
+ * @date 2022/7/20
  */
 @Api(tags = "管理系统-系统登录操作")
 @RestController
@@ -33,5 +34,11 @@ public class LoginController {
     @GetMapping("/logout")
     public void logout() {
         userService.logout();
+    }
+
+    @ApiOperation(value = "获取登录用户信息")
+    @GetMapping("/getUserId")
+    public String getUserId() {
+        return "当前登录用户的ID为" + JwtUtil.getUserId();
     }
 }

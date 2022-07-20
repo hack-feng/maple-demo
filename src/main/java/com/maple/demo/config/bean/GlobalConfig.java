@@ -16,7 +16,7 @@ public class GlobalConfig {
     public static final long EXPIRE_TIME = 60 * 60 * 12L;
 
     /**
-     * 生成token的私钥，数据库预留了salt字段，可以每个用户创建时生成不同的私钥，数据安全性更高，这里为了方便，暂不演示了
+     * 生成token的私钥
      */
     public static final String SECRET = "maple1223";
     

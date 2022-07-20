@@ -48,7 +48,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         if ("1".equals(user.getStatus())) {
             throw new MapleCheckException(ErrorCode.USER_STATUS_ERROR);
         }
-        if (!Md5Util.verifyPassword(req.getPassword(), user.getPassword(), user.getUserName())) {
+        if (!Md5Util.verifyPassword(req.getPassword(), user.getPassword(), user.getSalt())) {
             throw new MapleCheckException(ErrorCode.USER_LOGIN_ERROR);
         }
 

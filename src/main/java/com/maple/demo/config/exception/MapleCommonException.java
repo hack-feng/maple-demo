@@ -3,10 +3,10 @@ package com.maple.demo.config.exception;
 import com.maple.demo.config.bean.ErrorCode;
 
 /**
- * 检测结果不一致时，抛出此异常
+ * 通用异常，偷懒就抛出此异常吧
  *
  * @author 笑小枫
- * @date 2022/07/15
+ * @date 2022/07/20
  */
 public class MapleCommonException extends MapleBaseException {
 

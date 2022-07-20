@@ -52,6 +52,6 @@ public class Md5Util {
     }
 
     public static void main(String[] args) {
-        log.info(encrypt("123456", "maple1223"));
+        log.info(encrypt("admin111", "123456"));
     }
 }
