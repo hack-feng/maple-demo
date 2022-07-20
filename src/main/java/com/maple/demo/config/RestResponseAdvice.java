@@ -12,6 +12,11 @@ import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Pattern;
+
 /**
  * 对返回结果统一进行处理，包括返回结果格式统一包装，返回异常统一处理
  *
@@ -21,6 +26,17 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 @Slf4j
 @RestControllerAdvice
 public class RestResponseAdvice implements ResponseBodyAdvice<Object> {
+
+    /**
+     * 不需要包装的接口，会直接返回原结果
+     */
+    private final List<String> excludedUrlList = Arrays.asList(
+            "/webjars/**",
+            "/swagger/**",
+            "/v2/api-docs",
+            "/swagger-resources/**",
+            "/swagger-resources"
+    );
 
     @Override
     public boolean supports(@NotNull MethodParameter returnType,
@@ -39,7 +55,15 @@ public class RestResponseAdvice implements ResponseBodyAdvice<Object> {
                                   @NotNull MediaType selectedContentType,
                                   @NotNull Class<? extends HttpMessageConverter<?>> selectedConverterType,
                                   @NotNull ServerHttpRequest request,
-                                  ServerHttpResponse response) {
+                                  @NotNull ServerHttpResponse response) {
+        // 不需要包装的接口，直接返回原结果
+        String url =request.getURI().getPath();
+        for (String excludedUrl : excludedUrlList) {
+            if (Pattern.matches(excludedUrl.replace("*", ".*"), url)) {
+                return body;
+            }
+        }
+
         // 指定返回的结果为application/json格式
         // 不指定，String类型转json后返回Content-Type是text/plain;charset=UTF-8
         response.getHeaders().setContentType(MediaType.APPLICATION_JSON);

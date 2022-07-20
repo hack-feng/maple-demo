@@ -25,7 +25,7 @@ public class Knife4jConfiguration {
                         .title("笑小枫实例演示接口")
                         .description("笑小枫实例演示接口")
                         .termsOfServiceUrl("http://127.0.0.1:6666")
-                        .contact(new Contact("笑小枫", "https://www.xiaoxiaofeng.site", "zfzjava@163.com"))
+                        .contact(new Contact("笑小枫", "http://127.0.0.1:6666", "zfzjava@163.com"))
                         .version("1.0")
                         .build())
                 //分组名称
