@@ -22,6 +22,7 @@
 		<velocity-version>2.3</velocity-version>
 		<fastjson-version>2.0.7</fastjson-version>
 		<mysql-connector-version>8.0.29</mysql-connector-version>
+		<jwt-version>3.18.3</jwt-version>
 	</properties>
 
 	<dependencies>
@@ -110,6 +111,13 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>${fastjson-version}</version>
+		</dependency>
+
+		<!-- 引入JWT相关 -->
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>${jwt-version}</version>
 		</dependency>
 	</dependencies>
 

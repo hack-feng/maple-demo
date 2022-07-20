@@ -7,15 +7,21 @@ import lombok.Getter;
  * 统一异常信息枚举类
  *
  * @author 笑小枫
- * @date 2021/12/9
+ * @date 2022/6/20
  */
 @AllArgsConstructor
 @Getter
 public enum ErrorCode {
+    
 
     /**
      * 异常信息
      */
+    NO_TOKEN("1001", "用户未登录"),
+    TOKEN_EXPIRE("1002", "登陆超时，请重新登录"),
+    TOKEN_EXCHANGE("1003", "账号在其他地方登录，账号被踢出"),
+    USER_LOGIN_ERROR("2001", "用户名或密码错误"),
+    USER_STATUS_ERROR("2002", "用户已被停用，请联系管理员"),
     PARAM_ERROR("9001", "请求参数有误，请重试"),
 
     /**

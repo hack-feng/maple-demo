@@ -6,7 +6,7 @@ import lombok.Data;
  * 统一返回信息包装类
  *
  * @author 笑小枫
- * @date 2021/12/8
+ * @date 2022/7/11
  */
 @Data
 public class ResultJson {
