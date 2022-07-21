@@ -8,6 +8,7 @@ import com.maple.demo.util.RedisUtil;
 import com.maple.demo.util.ResultJson;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.BeanFactory;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
 import org.springframework.util.StringUtils;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -29,6 +30,7 @@ import java.util.regex.Pattern;
  */
 @WebFilter(filterName = "jwtFilter", urlPatterns = {"/*"})
 @AllArgsConstructor
+@Order(1)
 public class JwtFilter implements Filter {
 
     private final List<String> excludedUrlList;

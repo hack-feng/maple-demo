@@ -18,8 +18,11 @@ public class GlobalConfig {
     /**
      * 生成token的私钥
      */
-    public static final String SECRET = "maple1223";
-    
+    public static final String SECRET = "maple123";
+
+    /**
+     * 前端传递token的header名称
+     */
     public static final String TOKEN_NAME = "Authorization";
 
     /**
