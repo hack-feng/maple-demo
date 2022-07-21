@@ -23,6 +23,7 @@
         <fastjson-version>2.0.7</fastjson-version>
         <mysql-connector-version>8.0.29</mysql-connector-version>
         <jwt-version>3.18.3</jwt-version>
+        <easyexcel-version>3.1.0</easyexcel-version>
     </properties>
 
     <dependencies>
@@ -94,6 +95,12 @@
             <version>${lombok-version}</version>
         </dependency>
 
+        <!-- 引入aop依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
         <!-- 引入redis依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -120,10 +127,11 @@
             <version>${jwt-version}</version>
         </dependency>
 
-        <!-- 引入aop依赖 -->
+        <!-- 引入阿里巴巴easyExcel -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>${easyexcel-version}</version>
         </dependency>
     </dependencies>
 
