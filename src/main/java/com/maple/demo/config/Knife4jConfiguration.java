@@ -12,6 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 /**
  * @author 笑小枫
+ * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
  * @date 2022/6/28
  */
 @Configuration

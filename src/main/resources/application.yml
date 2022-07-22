@@ -52,6 +52,21 @@ spring:
         max-wait: -1
         max-idle: 16
         min-idle: 8
+  mail:
+    default-encoding: UTF-8
+    host: smtp.qq.com
+    username: 1150640979@qq.com
+    password: 1234567890
+    port: 22
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
 
 # 配置mybatis-plus的xml和bean的目录
 mybatis-plus:

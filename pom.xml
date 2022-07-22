@@ -133,6 +133,18 @@
             <artifactId>easyexcel</artifactId>
             <version>${easyexcel-version}</version>
         </dependency>
+
+        <!-- 配置thymeleaf模板依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- 支持发送邮件依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

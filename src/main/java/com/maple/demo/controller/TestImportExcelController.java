@@ -7,6 +7,7 @@ import com.alibaba.fastjson.JSON;
 import com.maple.demo.config.bean.excel.ImportCompany;
 import com.maple.demo.config.bean.excel.ImportContact;
 import com.maple.demo.listener.ImportExcelListener;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +23,13 @@ import java.util.Map;
 
 /**
  * @author 笑小枫
+ * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
  * @date 2022/7/22
  */
 @Slf4j
 @RestController
 @RequestMapping("/example")
+@Api(tags = "实例演示-导入Excel")
 public class TestImportExcelController {
 
     @PostMapping("/importExcel")

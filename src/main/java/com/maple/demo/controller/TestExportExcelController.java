@@ -5,6 +5,7 @@ import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.write.metadata.WriteSheet;
 import com.maple.demo.config.bean.excel.ExportCompany;
 import com.maple.demo.config.bean.excel.ExportContact;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,11 +20,13 @@ import java.util.List;
 
 /**
  * @author 笑小枫
+ * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
  * @date 2022/7/22
  */
 @Slf4j
 @RestController
 @RequestMapping("/example")
+@Api(tags = "实例演示-导出Excel")
 public class TestExportExcelController {
 
 

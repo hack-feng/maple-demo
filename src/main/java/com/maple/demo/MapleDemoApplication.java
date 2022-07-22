@@ -6,6 +6,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
  * @author 笑小枫
+ * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
  */
 @ServletComponentScan
 @SpringBootApplication

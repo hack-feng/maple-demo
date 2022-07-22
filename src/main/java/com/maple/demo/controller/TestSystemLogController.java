@@ -5,16 +5,19 @@ import com.maple.demo.config.bean.ErrorCode;
 import com.maple.demo.config.enums.BusinessTypeEnum;
 import com.maple.demo.config.enums.OperateTypeEnum;
 import com.maple.demo.config.exception.MapleCommonException;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * @author 笑小枫
+ * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
  * @date 2022/7/21
  */
 @RestController
 @RequestMapping("/example")
+@Api(tags = "实例演示-日志记录演示接口")
 public class TestSystemLogController {
 
     @ApiOperation(value = "测试带参数、有返回结果的get请求")
