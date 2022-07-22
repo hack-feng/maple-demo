@@ -4,8 +4,8 @@ import com.alibaba.excel.EasyExcelFactory;
 import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.read.metadata.ReadSheet;
 import com.alibaba.fastjson.JSON;
-import com.maple.demo.config.bean.excel.ExcelCompany;
-import com.maple.demo.config.bean.excel.ExcelContact;
+import com.maple.demo.config.bean.excel.ImportCompany;
+import com.maple.demo.config.bean.excel.ImportContact;
 import com.maple.demo.listener.ImportExcelListener;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,8 +37,8 @@ public class TestImportExcelController {
             // 公司信息构造器
             ReadSheet dealerSheet = EasyExcelFactory
                     .readSheet(0)
-                    .head(ExcelCompany.class)
-                    .registerReadListener(new ImportExcelListener<ExcelCompany>(data -> {
+                    .head(ImportCompany.class)
+                    .registerReadListener(new ImportExcelListener<ImportCompany>(data -> {
                         // 处理你的业务逻辑，最好抽出一个方法单独处理逻辑
                         log.info("公司信息数据----------------------------------------------");
                         log.info("公司信息数据：" + JSON.toJSONString(data));
@@ -50,8 +50,8 @@ public class TestImportExcelController {
             // 联系人信息构造器
             ReadSheet contactSheet = EasyExcelFactory
                     .readSheet(1)
-                    .head(ExcelContact.class)
-                    .registerReadListener(new ImportExcelListener<ExcelContact>(data -> {
+                    .head(ImportContact.class)
+                    .registerReadListener(new ImportExcelListener<ImportContact>(data -> {
                         // 处理你的业务逻辑，最好抽出一个方法单独处理逻辑
                         log.info("联系人信息数据------------------------------------------");
                         log.info("联系人信息数据：" + JSON.toJSONString(data));

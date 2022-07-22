@@ -8,7 +8,7 @@ import lombok.Data;
  * @date 2022/7/22
  */
 @Data
-public class ExcelContact {
+public class ImportContact {
     @ExcelProperty("公司名称")
     private String companyName;
 

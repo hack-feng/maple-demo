@@ -9,7 +9,7 @@ import java.util.Date;
  * @date 2022/7/22
  */
 @Data
-public class ExcelCompany {
+public class ImportCompany {
 
     // -------------------- 基本信息 start -------------
 
