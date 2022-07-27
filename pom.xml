@@ -140,6 +140,12 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
+        <!-- 配置freemarker模板依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
         <!-- 支持发送邮件依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
