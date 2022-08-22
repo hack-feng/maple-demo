@@ -20,7 +20,7 @@ import static com.maple.demo.util.PdfFontUtil.*;
 /**
  * @author 笑小枫
  * @date 2022/8/15
- * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 public class PdfUtil {
 

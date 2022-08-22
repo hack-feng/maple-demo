@@ -1,6 +1,6 @@
 package com.maple.demo.controller;
 
-import com.maple.demo.util.Base64Util;
+import com.maple.demo.util.common.Base64Util;
 import com.maple.demo.util.WordUtil;
 import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
@@ -21,7 +21,7 @@ import java.util.*;
 /**
  * @author 笑小枫
  * @date 2022/7/27
- * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 @RestController
 @AllArgsConstructor

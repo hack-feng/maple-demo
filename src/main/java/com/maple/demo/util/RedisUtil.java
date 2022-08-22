@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author 笑小枫
  * @date 2022/07/19
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 @Component
 public class RedisUtil {

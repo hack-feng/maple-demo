@@ -7,6 +7,7 @@ import lombok.Data;
  *
  * @author 笑小枫
  * @date 2022/7/11
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 @Data
 public class ResultJson {

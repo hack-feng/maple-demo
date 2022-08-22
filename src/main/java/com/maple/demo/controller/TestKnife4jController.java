@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author 笑小枫
- * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  * @date 2022/6/30
  */
 @Api(tags = "实例演示-Knife4j接口文档")
@@ -24,7 +24,7 @@ public class TestKnife4jController {
         Test test = new Test();
         test.setName("笑小枫");
         test.setAge(18);
-        test.setRemark("大家好，我是笑小枫，喜欢我的小伙伴点个赞呗，欢迎访问我的个人博客：https://www.xiaoxiaofeng.site");
+        test.setRemark("大家好，我是笑小枫，喜欢我的小伙伴点个赞呗，欢迎访问我的个人博客：https://www.xiaoxiaofeng.com");
         return test;
     }
 

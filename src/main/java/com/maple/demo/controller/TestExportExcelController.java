@@ -20,7 +20,7 @@ import java.util.List;
 
 /**
  * @author 笑小枫
- * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  * @date 2022/7/22
  */
 @Slf4j
@@ -63,7 +63,7 @@ public class TestExportExcelController {
                     .businessCityName("临沂市")
                     .businessAreaName("河东区")
                     .entStatus("营业")
-                    .netAddress("www.xiaoxiaofeng.site")
+                    .netAddress("www.xiaoxiaofeng.com")
                     .csdnAddress("https://zhangfz.blog.csdn.net")
                     .employeeMaxCount("100")
                     .startDate(new Date())

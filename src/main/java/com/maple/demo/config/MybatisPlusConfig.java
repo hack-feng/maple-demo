@@ -17,6 +17,7 @@ import java.util.Date;
  *
  * @author 笑小枫
  * @date 2022/7/10
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 @EnableTransactionManagement
 @Configuration

@@ -1,4 +1,4 @@
-package com.maple.demo.util;
+package com.maple.demo.util.common;
 
 import com.maple.demo.config.bean.ErrorCode;
 import com.maple.demo.config.exception.MapleCommonException;
@@ -12,6 +12,7 @@ import org.springframework.util.StringUtils;
  *
  * @author 笑小枫
  * @date 2022/7/20
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 @Slf4j
 public class Md5Util {

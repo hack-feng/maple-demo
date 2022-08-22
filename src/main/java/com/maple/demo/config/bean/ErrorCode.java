@@ -29,7 +29,7 @@ public enum ErrorCode {
      */
     COMMON_ERROR("9998", "笑小枫太懒，居然没有定义异常原因"),
 
-    OTHER_ERROR("9999", "未知异常，请联系笑小枫：https://www.xiaoxiaofeng.site");
+    OTHER_ERROR("9999", "未知异常，请联系笑小枫：https://www.xiaoxiaofeng.com");
 
     private final String code;
 

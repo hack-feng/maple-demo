@@ -20,6 +20,7 @@ import java.util.Objects;
  *
  * @author 笑小枫
  * @date 2022/7/20
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 public class JwtUtil {
 

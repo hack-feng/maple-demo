@@ -7,7 +7,8 @@ import com.maple.demo.config.bean.BaseEntity;
  * MyBatis-Plus代码生成工具
  *
  * @author 笑小枫
- * @date 2019/4/25
+ * @date 2022/4/25
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 public class Generator {
 

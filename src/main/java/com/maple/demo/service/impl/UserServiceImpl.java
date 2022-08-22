@@ -10,7 +10,7 @@ import com.maple.demo.entity.User;
 import com.maple.demo.mapper.UserMapper;
 import com.maple.demo.service.IUserService;
 import com.maple.demo.util.JwtUtil;
-import com.maple.demo.util.Md5Util;
+import com.maple.demo.util.common.Md5Util;
 import com.maple.demo.util.RedisUtil;
 import com.maple.demo.vo.model.UserModel;
 import com.maple.demo.vo.query.LoginQuery;

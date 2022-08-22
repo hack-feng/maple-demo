@@ -7,6 +7,7 @@ import com.maple.demo.config.bean.ErrorCode;
  *
  * @author 笑小枫
  * @date 2022/07/20
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 public class MapleCommonException extends MapleBaseException {
 

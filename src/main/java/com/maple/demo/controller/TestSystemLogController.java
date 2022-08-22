@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * @author 笑小枫
- * @see <a href="https://www.xiaoxiaofeng.site">https://www.xiaoxiaofeng.site</a>
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  * @date 2022/7/21
  */
 @RestController

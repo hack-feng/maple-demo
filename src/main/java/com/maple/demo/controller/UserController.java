@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
  *
  * @author 笑小枫
  * @since 2022-07-11
+ * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
 @RestController
 @RequestMapping("/user")
