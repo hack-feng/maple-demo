@@ -21,6 +21,26 @@ public class Md5Util {
 
     }
 
+    public static void main(String[] args) {
+        String password = "123456";
+        log.info("普通MD5加密：" + md5(password));
+        String salt = "xxx";
+        String cipherText = encrypt(password, salt);
+        log.info("MD5加盐加密后的密文：" + cipherText);
+        boolean isOk = verifyPassword(password, cipherText, salt);
+        log.info("校验密码结果：" + isOk);
+    }
+
+    /**
+     * MD5加密处理
+     *
+     * @param password 密码明文
+     * @return 加密后密文
+     */
+    public static String md5(String password) {
+        return DigestUtils.md5DigestAsHex(password.getBytes());
+    }
+
     /**
      * 密码加密处理
      *
@@ -50,9 +70,5 @@ public class Md5Util {
         }
         String targetEncryptPwd = encrypt(target, salt);
         return targetEncryptPwd.equals(source);
-    }
-
-    public static void main(String[] args) {
-        log.info(encrypt("admin111", "123456"));
     }
 }

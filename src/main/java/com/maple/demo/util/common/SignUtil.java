@@ -31,8 +31,12 @@ public class SignUtil {
     }
 
     public static void main(String[] args) {
-        String data = "";
-        log.info(DigestUtils.sha256Hex("TG0021" + "&" + "20220809185000" + "&" + "d84d9e1fe49d427da66fd78724dcfc29"));
+        String data = "XXF001";
+        String date = DateUtil.dateToStr(new Date(), DateUtil.YYYYMMDDHHMMSS);
+        String salt = "d84d9e1fe49d427da66fd78724dcfc29";
+        String ciphertext = DigestUtils.sha256Hex(data + "&" + date + "&" + salt);
+        log.info("加密后的密文：" + ciphertext);
+        checkCangoSign(data, ciphertext + "_" + date, salt, 300L);
     }
 
     /**
