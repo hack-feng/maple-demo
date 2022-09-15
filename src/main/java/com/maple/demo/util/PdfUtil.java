@@ -5,6 +5,7 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.*;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.compress.utils.IOUtils;
 
 import javax.servlet.ServletOutputStream;
@@ -22,6 +23,7 @@ import static com.maple.demo.util.PdfFontUtil.*;
  * @date 2022/8/15
  * @see <a href="https://www.xiaoxiaofeng.com">https://www.xiaoxiaofeng.com</a>
  */
+@Slf4j
 public class PdfUtil {
 
     private PdfUtil() {
@@ -206,7 +208,7 @@ public class PdfUtil {
     public static void readDeletePdf(String fileName, ServletOutputStream outputStream) {
         File file = new File(fileName);
         if (!file.exists()) {
-            System.out.println(fileName + "文件不存在");
+            log.info(fileName + "文件不存在");
         }
         try (InputStream in = new FileInputStream(fileName)) {
             IOUtils.copy(in, outputStream);
