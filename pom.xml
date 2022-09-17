@@ -168,6 +168,21 @@
             <artifactId>itext-asian</artifactId>
             <version>5.2.0</version>
         </dependency>
+
+        <!-- 华为云OBS -->
+        <dependency>
+            <groupId>com.huaweicloud</groupId>
+            <artifactId>esdk-obs-java-bundle</artifactId>
+            <version>3.21.8</version>
+        </dependency>
+
+        <!-- 又拍云OSS -->
+        <dependency>
+            <groupId>com.upyun</groupId>
+            <artifactId>java-sdk</artifactId>
+            <version>4.2.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>

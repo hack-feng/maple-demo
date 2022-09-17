@@ -6,7 +6,7 @@ spring:
     name: maple-admin
   profiles:
     active: prod
-    include: xxf
+    include: xxf,file
   # 配置数据库连接
   datasource:
     # 数据库连接地址及常用配置

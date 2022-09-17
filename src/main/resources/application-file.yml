@@ -1,0 +1,16 @@
+file:
+  local:
+    maxFileSize: 10485760
+    imageFilePath: D:/test/image/
+    docFilePath: D:/test/file/
+  obs:
+    accessKey: your ak
+    secretKey: your sk
+    endPoint: obs.cn-east-2.myhuaweicloud.com
+    bucketName: mapleBucket
+  upy:
+    bucketName: mapleBucket
+    userName: 操作用户名称
+    password: 操作用户密码
+    showUrl: www.xiaoxiaofeng.com
+    
