@@ -93,6 +93,53 @@ public class PdfUtil {
     }
 
     /**
+     * 创建PDF，并导出
+     *
+     * @param out 保存路径
+     */
+    public static void createAndExportPdfPage(ServletOutputStream out) {
+        try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+            // 创建文档
+            Document document = new Document();
+            PdfWriter writer = PdfWriter.getInstance(document, baos);
+            document.open();
+            // 报告标题
+            document.add(PdfFontUtil.getParagraph("笑小枫的网站介绍", TITLE_FONT, 1));
+            document.add(PdfFontUtil.getParagraph("\n网站名称：笑小枫(www.xiaoxiaofeng.com)", INFO_FONT, -1));
+            document.add(PdfFontUtil.getParagraph("\n生成时间：2022-07-02\n\n", INFO_FONT, -1));
+            // 报告内容
+            // 段落标题 + 报表图
+            document.add(PdfFontUtil.getParagraph("文章数据统计", NODE_FONT, -1));
+            document.add(PdfFontUtil.getParagraph("\n· 网站首页图\n\n", BLOCK_FONT, -1));
+            // 设置图片宽高
+            float documentWidth = document.getPageSize().getWidth() - document.leftMargin() - document.rightMargin();
+            float documentHeight = documentWidth / 580 * 320;
+            document.add(PdfFontUtil.getImage("D:\\xiaoxiaofeng.jpg", documentWidth - 80, documentHeight - 80));
+            // 数据表格
+            document.add(PdfFontUtil.getParagraph("\n· 数据详情\n\n", BLOCK_FONT, -1));
+            // 生成6列的表格
+            PdfPTable dataTable = PdfFontUtil.getPdfTable(6, 500);
+            // 设置表格
+            List<String> tableHeadList = tableHead();
+            List<List<String>> tableDataList = getTableData();
+            PdfFontUtil.addTableCell(dataTable, CONTENT_FONT, tableHeadList);
+            for (List<String> tableData : tableDataList) {
+                PdfFontUtil.addTableCell(dataTable, CONTENT_FONT, tableData);
+            }
+            document.add(dataTable);
+            document.add(PdfFontUtil.getParagraph("\n· 报表描述\n\n", BLOCK_FONT, -1));
+            document.add(PdfFontUtil.getParagraph("数据报告可以监控每天的推广情况，" +
+                    "可以针对不同的数据表现进行分析，以提升推广效果。", CONTENT_FONT, -1));
+            document.newPage();
+            document.close();
+            baos.writeTo(out);
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * 创建PDF，并保存到指定位置
      *
      * @param filePath 保存路径

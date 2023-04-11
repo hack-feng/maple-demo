@@ -47,10 +47,27 @@ public class TestPdfController {
         response.setContentType("application/PDF;charset=utf-8");
         // 设置名称
         response.setHeader("Content-Disposition", "attachment; filename=" + "xiaoxiaofeng.pdf");
-        try {
-            ServletOutputStream out = response.getOutputStream();
+        try (ServletOutputStream out = response.getOutputStream()) {
             // 模板路径记
             PdfUtil.fillTemplate(dataMap, photoMap, out, "src/main/resources/templates/xiaoxiaofeng.pdf");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @ApiOperation(value = "测试纯代码生成PDF并导出PDF")
+    @GetMapping("/createAndExportPdf")
+    public void createAndExportPdf(HttpServletResponse response) {
+        // 设置response参数，可以打开下载页面
+        response.reset();
+        response.setCharacterEncoding("UTF-8");
+        // 定义输出类型
+        response.setContentType("application/PDF;charset=utf-8");
+        // 设置名称
+        response.setHeader("Content-Disposition", "attachment; filename=" + "xiaoxiaofeng.pdf");
+        try (ServletOutputStream out = response.getOutputStream()) {
+            // 模板路径记
+            PdfUtil.createAndExportPdfPage(out);
         } catch (IOException e) {
             e.printStackTrace();
         }
